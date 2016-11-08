@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     
 
     @IBOutlet var loginScreen: UIView!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var username: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,6 +26,12 @@ class ViewController: UIViewController {
 
 
     @IBAction func login(sender: AnyObject) {
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        <#code#>
     }
 }
 
