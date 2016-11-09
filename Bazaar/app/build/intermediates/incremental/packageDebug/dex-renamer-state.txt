@@ -1,0 +1,7 @@
+#Wed Nov 09 11:38:19 EST 2016
+base.0=C\:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c0a3f102ca94135cee7ec9b19fc7194d25cd197c
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_61be86fa868c5fe5df7deb694e9fe2873e1b0090\\classes.dex
+base.1=C\:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_61be86fa868c5fe5df7deb694e9fe2873e1b0090
+file.0=C\:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c0a3f102ca94135cee7ec9b19fc7194d25cd197c\\classes.dex
