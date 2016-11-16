@@ -1,4 +1,4 @@
-package edu.uvm.bazaar;
+package edu.uvm.loginregister;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("edu.uvm.bazaar", appContext.getPackageName());
+        assertEquals("edu.uvm.loginregister", appContext.getPackageName());
     }
 }

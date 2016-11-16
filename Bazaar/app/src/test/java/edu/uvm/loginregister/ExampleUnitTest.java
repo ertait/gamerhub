@@ -1,4 +1,4 @@
-package edu.uvm.bazaar;
+package edu.uvm.loginregister;
 
 import org.junit.Test;
 
