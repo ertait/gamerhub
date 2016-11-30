@@ -128,6 +128,7 @@ class Database {
         $query = NULL;
 
         $dsn = 'mysql:host=webdb.uvm.edu;dbname=';
+        $server = "WebDB";
 
         if (self::DB_DEBUG) {
             print "<p>Username: " . $dbUserName;
@@ -138,6 +139,7 @@ class Database {
         try {
             if (!$this->db)
                 $this->db = new PDO($dsn . $dbName, $dbUserName, $dbUserPass);
+               // $this->db = mysqli_connect($server,$dbUserName,$dbUserPass,$dbName);
             if (!$this->db) {
                 if (self::DB_DEBUG)
                     echo '<p>A You are NOT connected to the database!</p>';
@@ -279,7 +281,7 @@ class Database {
     //############################################################################
     // Performs an insert query and returns boolean true or false based on success
     // of query.     
-    public function insert($query, $values = "", $wheres = 0, $conditions = 0, $quotes = 0, $symbols = 0, $spacesAllowed = false, $semiColonAllowed = false) {
+    public function insert($query="", $values = "", $wheres = 0, $conditions = 0, $quotes = 0, $symbols = 0, $spacesAllowed = false, $semiColonAllowed = false) {
         $success = false;
 
         if ($wheres != $this->countWhere($query)) {
@@ -305,13 +307,16 @@ class Database {
         $statement = $this->db->prepare($query);
 
         if (is_array($values)) {
+           // $statement = $statement->bind_param($types,$values);
             $success = $statement->execute($values);
+           // $success = $success."empty string";
         } else {
             $success = $statement->execute();
+           // $success = $success."empty string";
         }
 
         $statement->closeCursor();
-
+        echo "$success"."string";
         return $success;
     }
 
@@ -417,7 +422,10 @@ class Database {
         $recordSet = $statement->fetchAll();
 
         $statement->closeCursor();
-
+  //      print_r($recordSet);
+ //       print_r($values);
+//echo $recordSet.":text";
+        //TRY ECHO STATEMENT HERE TO SEE IF RECORD SET IS BEING SET
         return $recordSet;
     }
 

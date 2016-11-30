@@ -1,6 +1,6 @@
 <?php
-define("DATABASE_NAME", strtoupper(get_current_user()) . '_GameHub');
-
+//define("DATABASE_NAME", strtoupper(get_current_user()) . '_GameHub');
+define("DATABASE_NAME","ISPIZIZE_GameHub");
 define("ADMIN_EMAIL", get_current_user() . "@uvm.edu");
 
 define("LINE_BREAK", "\n");

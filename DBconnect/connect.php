@@ -63,19 +63,23 @@ $results = $thisDatabaseWriter->insert($query, $data);
         // Set up database connection
 
         print "<!-- make Database connections -->";
-        $dbName = DATABASE_NAME;
+        //$dbName = DATABASE_NAME;
+        $dbName = "ISPIZIZE_GameHub";
 
-        $dbUserName = get_current_user() . '_reader';
+        //$dbUserName = get_current_user() . '_reader';
+        $dbUserName = "ispizize_reader";
         $whichPass = "r"; //flag for which one to use.
         //use this for select statements
         $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
         
-        $dbUserName = get_current_user() . '_writer';
+        //$dbUserName = get_current_user() . '_writer';
+        $dbUserName = "ispizize_writer";
         $whichPass = "w";
         //use this for insert and update statements
         $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
         
-        $dbUserName = get_current_user() . '_admin';
+        //$dbUserName = get_current_user() . '_admin';
+        $dbUserName = "ispizize_admin";
         $whichPass = "a";
         //use this for creating new tables
         $thisDatabaseAdmin = new Database($dbUserName, $whichPass, $dbName);
@@ -85,7 +89,7 @@ $results = $thisDatabaseWriter->insert($query, $data);
 
     <!-- **********************     Body section      ********************** -->
     <?php
-    print '<body id="' . $PATH_PARTS['filename'] . '">';
-    include "header.php";
-    include "nav.php";
+//    print '<body id="' . $PATH_PARTS['filename'] . '">';
+ //   include "header.php";
+ //   include "nav.php";
     ?>
