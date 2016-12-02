@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import edu.uvm.loginregister.R;
+
 public class EmptyGameProfile extends AppCompatActivity {
 
 

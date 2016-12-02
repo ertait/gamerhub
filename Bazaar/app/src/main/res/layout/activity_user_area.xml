@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.uvm.loginregister.UserAreaActivity">
+    tools:context="edu.uvm.loginregister.edu.uvm.bazaar.UserAreaActivity">
 
     <TextView
         android:text="Welcome to Bazaar!"
@@ -82,5 +82,17 @@
         android:layout_above="@+id/subgroupslist"
         android:layout_alignRight="@+id/subGames"
         android:layout_alignEnd="@+id/subGames" />
+
+    <Button
+        android:text="Games List"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btGames"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_below="@+id/tvWelcomeMsg"
+        android:layout_alignLeft="@+id/tvWelcomeMsg"
+        android:layout_alignStart="@+id/tvWelcomeMsg"
+        android:layout_marginTop="10dp" />
 
 </RelativeLayout>

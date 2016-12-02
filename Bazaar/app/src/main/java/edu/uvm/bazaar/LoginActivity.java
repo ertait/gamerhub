@@ -1,4 +1,4 @@
-package edu.uvm.loginregister;
+package edu.uvm.bazaar;
 
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +19,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import edu.uvm.loginregister.R;
 
 public class LoginActivity extends AppCompatActivity {
 

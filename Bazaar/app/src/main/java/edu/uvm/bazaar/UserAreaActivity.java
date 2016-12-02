@@ -1,31 +1,22 @@
-package edu.uvm.loginregister;
+package edu.uvm.bazaar;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.net.Uri;
-import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
-import org.w3c.dom.Text;
-import android.database.Cursor;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import edu.uvm.loginregister.R;
 
 public class UserAreaActivity extends AppCompatActivity implements View.OnClickListener {
     private static final int RESULT_LOAD_IMAGE = 1;
@@ -43,8 +34,15 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
         final TextView subgames = (TextView) findViewById(R.id.subGames);
         final GridLayout subgameslist = (GridLayout) findViewById(R.id.subGamesList);
         final LinearLayout subgroupslist = (LinearLayout) findViewById(R.id.subgroupslist);
+        final Button gamelist = (Button) findViewById(R.id.btGames);
         IprofilePic = (ImageView) findViewById(R.id.profilepic);
-
+        gamelist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registerIntent = new Intent(UserAreaActivity.this, Games.class);
+                UserAreaActivity.this.startActivity(registerIntent);
+            }
+        });
         IprofilePic.setOnClickListener(this);
     }
 

@@ -1,15 +1,7 @@
-package edu.uvm.loginregister;
+package edu.uvm.bazaar;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.support.v4.util.LruCache;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
 import java.util.Map;
