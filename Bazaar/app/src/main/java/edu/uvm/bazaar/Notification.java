@@ -1,4 +1,4 @@
-package edu.uvm.loginregister;
+package edu.uvm.bazaar;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -11,42 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-
-/*
-public class MainActivity extends Activity implements OnClickListener{
-
-    private Button b;
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_notification);
-        b=(Button)findViewById(R.id.button);
-        b.setOnClickListener(this);
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu screen) {
-        getMenuInflater().inflate(R.menu.content_notification, screen);
-        return true;
-    }
-
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent();
-        PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
-        Notification noti = new Notification.Builder(this)
-                .setTicker("Ticker Title")
-                .setContentTitle("Content Title")
-                .setContentText("Notification content.")
-                .setSmallIcon(R.drawable.ic_launcher)
-                .setContentIntent(pIntent).getNotification();
-        noti.flags=Notification.FLAG_AUTO_CANCEL;
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        notificationManager.notify(0, noti);
-    }
-}
-*/
 
 
 public class Notification extends AppCompatActivity {
@@ -91,3 +55,40 @@ public class Notification extends AppCompatActivity {
 }
 
 
+// This is just some sample code I found online that I could potentially use. Don't worry about this. //
+
+/*
+public class MainActivity extends Activity implements OnClickListener{
+
+    private Button b;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.content_notification);
+        b=(Button)findViewById(R.id.button);
+        b.setOnClickListener(this);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu screen) {
+        getMenuInflater().inflate(R.menu.content_notification, screen);
+        return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent();
+        PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        Notification noti = new Notification.Builder(this)
+                .setTicker("Ticker Title")
+                .setContentTitle("Content Title")
+                .setContentText("Notification content.")
+                .setSmallIcon(R.drawable.ic_launcher)
+                .setContentIntent(pIntent).getNotification();
+        noti.flags=Notification.FLAG_AUTO_CANCEL;
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(0, noti);
+    }
+}
+*/

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.uvm.loginregister"> <!-- <uses-permission android:name="android.permission-group.STORAGE"/> -->
+    package="edu.uvm.bazaar"> <!-- <uses-permission android:name="android.permission-group.STORAGE"/> -->
     <uses-sdk
         android:minSdkVersion="23"
         android:targetSdkVersion="25" />
@@ -36,8 +36,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".UserAreaActivity" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -53,10 +51,6 @@
         <activity android:name="edu.uvm.bazaar.UserAreaActivity" />
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
          App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
 
     </application>
 
