@@ -368,65 +368,8 @@
                     "startLine": 21,
                     "startColumn": 4,
                     "startOffset": 2037,
-                    "endColumn": 173,
-                    "endOffset": 2206
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 656,
-                        "endColumn": 173,
-                        "endOffset": 825
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 22,
-                    "startColumn": 4,
-                    "startOffset": 2211,
-                    "endColumn": 153,
-                    "endOffset": 2360
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 2641,
-                        "endColumn": 153,
-                        "endOffset": 2790
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 23,
-                    "startColumn": 4,
-                    "startOffset": 2365,
-                    "endColumn": 111,
-                    "endOffset": 2472
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 2369,
-                        "endColumn": 111,
-                        "endOffset": 2476
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 24,
-                    "startColumn": 4,
-                    "startOffset": 2477,
                     "endColumn": 112,
-                    "endOffset": 2585
+                    "endOffset": 2145
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -441,11 +384,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 2590,
+                    "startOffset": 2150,
                     "endColumn": 184,
-                    "endOffset": 2770
+                    "endOffset": 2330
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -460,11 +403,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 2775,
+                    "startOffset": 2335,
                     "endColumn": 132,
-                    "endOffset": 2903
+                    "endOffset": 2463
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -479,30 +422,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 2908,
-                    "endColumn": 168,
-                    "endOffset": 3072
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 996,
-                        "endColumn": 172,
-                        "endOffset": 1164
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 28,
-                    "startColumn": 4,
-                    "startOffset": 3077,
+                    "startOffset": 2468,
                     "endColumn": 107,
-                    "endOffset": 3180
+                    "endOffset": 2571
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -517,11 +441,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 3185,
+                    "startOffset": 2576,
                     "endColumn": 201,
-                    "endOffset": 3382
+                    "endOffset": 2773
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -536,49 +460,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 3387,
-                    "endColumn": 187,
-                    "endOffset": 3570
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 1296,
-                        "endColumn": 187,
-                        "endOffset": 1479
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 31,
-                    "startColumn": 4,
-                    "startOffset": 3575,
-                    "endColumn": 194,
-                    "endOffset": 3765
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 1484,
-                        "endColumn": 194,
-                        "endOffset": 1674
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 32,
-                    "startColumn": 4,
-                    "startOffset": 3770,
+                    "startOffset": 2778,
                     "endColumn": 127,
-                    "endOffset": 3893
+                    "endOffset": 2901
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -593,144 +479,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 3898,
-                    "endColumn": 167,
-                    "endOffset": 4061
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 4,
-                        "startOffset": 3206,
-                        "endColumn": 167,
-                        "endOffset": 3369
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 34,
-                    "startColumn": 4,
-                    "startOffset": 4066,
-                    "endColumn": 122,
-                    "endOffset": 4184
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 3083,
-                        "endColumn": 122,
-                        "endOffset": 3201
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 35,
-                    "startColumn": 4,
-                    "startOffset": 4189,
-                    "endColumn": 165,
-                    "endOffset": 4350
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 830,
-                        "endColumn": 165,
-                        "endOffset": 991
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 36,
-                    "startColumn": 4,
-                    "startOffset": 4355,
-                    "endColumn": 169,
-                    "endOffset": 4520
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 2913,
-                        "endColumn": 169,
-                        "endOffset": 3078
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 37,
-                    "startColumn": 4,
-                    "startOffset": 4525,
-                    "endColumn": 117,
-                    "endOffset": 4638
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 2795,
-                        "endColumn": 117,
-                        "endOffset": 2908
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 38,
-                    "startColumn": 4,
-                    "startOffset": 4643,
-                    "endColumn": 176,
-                    "endOffset": 4815
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 307,
-                        "endColumn": 176,
-                        "endOffset": 479
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 39,
-                    "startColumn": 4,
-                    "startOffset": 4820,
-                    "endColumn": 171,
-                    "endOffset": 4987
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 484,
-                        "endColumn": 171,
-                        "endOffset": 651
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 40,
-                    "startColumn": 4,
-                    "startOffset": 4992,
+                    "startOffset": 2906,
                     "endColumn": 135,
-                    "endOffset": 5123
+                    "endOffset": 3037
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -745,11 +498,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 5128,
+                    "startOffset": 3042,
                     "endColumn": 208,
-                    "endOffset": 5332
+                    "endOffset": 3246
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\9.8.0\\res\\values-fi\\values.xml",
@@ -764,11 +517,11 @@
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 5337,
+                    "startOffset": 3251,
                     "endColumn": 199,
-                    "endOffset": 5532
+                    "endOffset": 3446
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -783,30 +536,11 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 5537,
-                    "endColumn": 125,
-                    "endOffset": 5658
-                },
-                "from": {
-                    "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\values-fi\\common_strings.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 4,
-                        "startOffset": 3531,
-                        "endColumn": 125,
-                        "endOffset": 3652
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 44,
-                    "startColumn": 4,
-                    "startOffset": 5663,
+                    "startOffset": 3451,
                     "endColumn": 107,
-                    "endOffset": 5766
+                    "endOffset": 3554
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -821,11 +555,11 @@
             },
             {
                 "to": {
-                    "startLine": 45,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 5771,
+                    "startOffset": 3559,
                     "endColumn": 179,
-                    "endOffset": 5946
+                    "endOffset": 3734
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -840,11 +574,11 @@
             },
             {
                 "to": {
-                    "startLine": 46,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 5951,
+                    "startOffset": 3739,
                     "endColumn": 127,
-                    "endOffset": 6074
+                    "endOffset": 3862
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -859,11 +593,11 @@
             },
             {
                 "to": {
-                    "startLine": 47,
+                    "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 6079,
+                    "startOffset": 3867,
                     "endColumn": 206,
-                    "endOffset": 6281
+                    "endOffset": 4069
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -878,11 +612,11 @@
             },
             {
                 "to": {
-                    "startLine": 48,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 6286,
+                    "startOffset": 4074,
                     "endColumn": 168,
-                    "endOffset": 6450
+                    "endOffset": 4238
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -897,11 +631,11 @@
             },
             {
                 "to": {
-                    "startLine": 49,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 6455,
+                    "startOffset": 4243,
                     "endColumn": 95,
-                    "endOffset": 6546
+                    "endOffset": 4334
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -916,11 +650,11 @@
             },
             {
                 "to": {
-                    "startLine": 50,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 6551,
+                    "startOffset": 4339,
                     "endColumn": 99,
-                    "endOffset": 6646
+                    "endOffset": 4434
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -935,11 +669,11 @@
             },
             {
                 "to": {
-                    "startLine": 51,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 6651,
+                    "startOffset": 4439,
                     "endColumn": 111,
-                    "endOffset": 6758
+                    "endOffset": 4546
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\values-fi\\values.xml",
@@ -954,11 +688,11 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 6763,
+                    "startOffset": 4551,
                     "endColumn": 79,
-                    "endOffset": 6838
+                    "endOffset": 4626
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\values-fi\\values-fi.xml",
@@ -973,11 +707,11 @@
             },
             {
                 "to": {
-                    "startLine": 53,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 6843,
+                    "startOffset": 4631,
                     "endColumn": 100,
-                    "endOffset": 6939
+                    "endOffset": 4727
                 },
                 "from": {
                     "file": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\values-fi\\values-fi.xml",

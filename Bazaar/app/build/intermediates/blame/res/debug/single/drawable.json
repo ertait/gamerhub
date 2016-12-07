@@ -52,12 +52,12 @@
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\src\\main\\res\\drawable\\civ.jpg"
     },
     {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
@@ -72,16 +72,8 @@
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\drawable\\common_signin_btn_text_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_btn_check_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_icon_light.xml",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\drawable\\common_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
@@ -106,10 +98,6 @@
     {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\drawable\\common_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
@@ -164,6 +152,10 @@
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
+        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
@@ -172,16 +164,12 @@
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\league.jpg",
+        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\src\\main\\res\\drawable\\league.jpg"
     },
     {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\league.jpg",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\src\\main\\res\\drawable\\league.jpg"
     },
     {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wow.jpg",
@@ -220,19 +208,15 @@
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\notification_tile_bg.xml"
     },
     {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_text_light.xml",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.1.71\\res\\drawable\\common_signin_btn_text_light.xml"
+        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     }
 ]

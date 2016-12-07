@@ -19,29 +19,15 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Deljenje z"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Deljenje z:"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Strni"</string>
-    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Aplikacija zahteva posodobitev aplikacije Android Wear."</string>
-    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Ta aplikacije ne deluje, če ne posodobite aplikacije Android Wear."</string>
-    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Posodobitev aplikacije Android Wear"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Omogoči"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> ne bo delovala, če ne omogočite storitev Google Play."</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Omogočanje storitev Google Play"</string>
-    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Zahteva aplikacije <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Namesti"</string>
     <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> ne deluje brez storitev Google Play, vendar teh ni v napravi."</string>
-    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Ta aplikacija ne deluje brez storitev Google Play, ki jih ni v telefonu."</string>
-    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Ta aplikacija ne deluje brez storitev Google Play, ki jih ni v tabličnem računalniku."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Namestitev storitev Google Play"</string>
-    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"V tej napravi ne obstaja navedeni račun. Izberite drugega."</string>
-    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Neveljaven račun"</string>
-    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Za delovanje aplikacije morate omogočiti storitve Google Play."</string>
-    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Za povezavo s storitvami Google Play potrebujete internetno povezavo."</string>
-    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Omrežna napaka"</string>
-    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Za delovanje aplikacije morate namestiti storitve Google Play."</string>
-    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Za delovanje aplikacije morate posodobiti storitve Google Play."</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Napaka storitev Google Play"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> ima težave s storitvami Google Play. Poskusite znova."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> ne deluje brez storitev Google Play, ki jih vaša naprava ne podpira."</string>
-    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Storitve Google Play"</string>
     <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Posodobi"</string>
     <string msgid="7773943415006962566" name="common_google_play_services_update_text">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> ne bo delovala, če ne posodobite storitev Google Play."</string>
     <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Posodobitev storitev Google Play"</string>
