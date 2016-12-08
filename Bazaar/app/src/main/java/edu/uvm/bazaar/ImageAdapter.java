@@ -9,7 +9,6 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import edu.uvm.loginregister.R;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;

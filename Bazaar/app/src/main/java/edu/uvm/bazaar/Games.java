@@ -12,7 +12,6 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import edu.uvm.loginregister.R;
 
 public class Games extends AppCompatActivity {
 

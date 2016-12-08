@@ -30,7 +30,7 @@ public class Notification extends AppCompatActivity {
                         android.app.Notification noti = new android.app.Notification.Builder(Notification.this)
                                 .setTicker("Ticker Title")
                                 .setContentTitle("Content Title")
-                                .setContentText("Content Text here it goes")
+                                .setContentText("Content Text goes here")
                                 .setSmallIcon(R.drawable.common_google_signin_btn_text_dark)
                                 .setContentIntent(pIntent).getNotification();
                         noti.flags = android.app.Notification.FLAG_AUTO_CANCEL;

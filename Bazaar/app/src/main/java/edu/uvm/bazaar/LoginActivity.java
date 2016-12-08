@@ -20,7 +20,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.uvm.loginregister.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -33,18 +32,30 @@ public class LoginActivity extends AppCompatActivity {
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final Button bLogin = (Button) findViewById(R.id.bLogin);
         final TextView registerLink = (TextView) findViewById(R.id.tvRegisterHere);
+        final TextView notificationLink = (TextView) findViewById(R.id.tvNotification);
 
-        registerLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        notificationLink.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent notificationIntent = new Intent(LoginActivity.this, Notification.class);
+                        LoginActivity.this.startActivity(notificationIntent);
+                    }
+                });
+        registerLink.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
                 Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
                 LoginActivity.this.startActivity(registerIntent);
-            }
-        });
-        bLogin.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
+        }});
+
+
+        bLogin.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
                 final String username = etUsername.getText().toString();
                 final String password = etPassword.getText().toString();
                 RequestQueue lqueue = Volley.newRequestQueue(LoginActivity.this);

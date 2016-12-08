@@ -23,8 +23,6 @@ import org.w3c.dom.Text;
 import android.database.Cursor;
 
 
-import edu.uvm.loginregister.R;
-
 public class UserAreaActivity extends AppCompatActivity implements View.OnClickListener {
     private static final int RESULT_LOAD_IMAGE = 1;
     final private int MY_PERMISSIONS_REQUEST_PHOTOS = 111;

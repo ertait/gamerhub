@@ -56,4 +56,14 @@
         android:layout_below="@+id/bLogin"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:text="Notifications Try Me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:id="@+id/tvNotification"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

@@ -19,7 +19,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.uvm.loginregister.R;
 
 
 public class RegisterActivity extends AppCompatActivity {
