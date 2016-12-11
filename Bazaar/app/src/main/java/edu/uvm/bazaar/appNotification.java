@@ -37,6 +37,6 @@ public class appNotification extends AppCompatActivity {
         notification.flags = Notification.FLAG_AUTO_CANCEL;
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        notificationManager.notify(2, notification);
+        notificationManager.notify(0, notification);
     }
 }
