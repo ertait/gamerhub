@@ -21,16 +21,12 @@ public class appNotification extends AppCompatActivity {
 
     public void createNotification(View view) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
-                .setSmallIcon(android.R.drawable.ic_dialog_alert)
+                .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setContentTitle("Notification!")
-                .setContentText("This is my first notification!");
+                .setContentText("Press here to take you to the post!");
 
         NotificationCompat.BigTextStyle bigText = new NotificationCompat.BigTextStyle();
-        bigText.bigText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-                "Etiam hendrerit risus ut congue feugiat. Donec rutrum tristique purus, at tempus ipsum pharetra eget. " +
-                "Ut tristique aliquet elementum. Sed hendrerit quis sapien a mattis. " +
-                "Pellentesque interdum neque a felis mattis finibus. ");
-
+        bigText.bigText("There is a new post in your subscribed threads!" + "\n" +  "Press me for more information!");
         builder.setStyle(bigText);
 
         Intent resultIntent = new Intent(this, ResultNotification.class);
@@ -41,6 +37,6 @@ public class appNotification extends AppCompatActivity {
         notification.flags = Notification.FLAG_AUTO_CANCEL;
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        notificationManager.notify(0, notification);
+        notificationManager.notify(2, notification);
     }
 }
