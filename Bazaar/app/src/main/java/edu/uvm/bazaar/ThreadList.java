@@ -1,11 +1,13 @@
 package edu.uvm.bazaar;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import edu.uvm.loginregister.R;
@@ -31,6 +33,15 @@ public class ThreadList extends AppCompatActivity {
                 Intent intent = new Intent(ThreadList.this, Thread.class);
                 startActivity(intent);
 
+            }
+        });
+        final Button add = (Button) findViewById(R.id.addThread);
+        add.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder newThread = new AlertDialog.Builder(ThreadList.this);
+                newThread.setMessage("Add a new thread for Emma's absoulte pleasure").create().show();
             }
         });
 
