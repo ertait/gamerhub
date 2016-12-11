@@ -26,16 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="edu.uvm.bazaar.Notification"
-            android:label="@string/title_activity_notification"
-            android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name="edu.uvm.bazaar.appNotification" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="edu.uvm.bazaar.ResultNotification" />
 
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -50,6 +48,7 @@
         <activity android:name="edu.uvm.bazaar.ImageAdapter" />
         <activity android:name="edu.uvm.bazaar.RegisterActivity" />
         <activity android:name="edu.uvm.bazaar.UserAreaActivity" />
+
         <!--
          ATTENTION: This was auto-generated to add Google Play services to your project for
          App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.

@@ -91,7 +91,7 @@ MERGED from [com.android.support:transition:25.0.0] C:\Users\Clarence Ng\Desktop
 activity#edu.uvm.bazaar.LoginActivity
 ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:20:9-26:20
 	android:name
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:20:19-62
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:20:19-48
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
@@ -102,41 +102,41 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
 		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:24:27-74
-activity#edu.uvm.bazaar.Notification
-ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:27:9-37:20
-	android:label
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:29:13-64
-	android:theme
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:30:13-56
+activity#edu.uvm.bazaar.appNotification
+ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:27:9-33:20
 	android:name
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:28:13-41
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:27:19-50
+activity#edu.uvm.bazaar.ResultNotification
+ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:34:9-65
+	android:name
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:34:19-53
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:43:9-45:69
+ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:40:9-42:69
 MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:45:13-66
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:42:13-66
 	android:name
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:44:13-58
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:41:13-58
 activity#edu.uvm.bazaar.Games
-ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:47:9-57
+ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:44:9-43
 	android:name
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:47:19-54
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:44:19-40
 activity#edu.uvm.bazaar.EmptyGameProfile
-ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:48:9-68
+ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:45:9-54
 	android:name
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:48:19-65
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:45:19-51
 activity#edu.uvm.bazaar.ImageAdapter
-ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:49:9-64
+ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:46:9-50
 	android:name
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:49:19-61
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:46:19-47
 activity#edu.uvm.bazaar.RegisterActivity
-ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:50:9-68
+ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:47:9-54
 	android:name
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:50:19-65
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:47:19-51
 activity#edu.uvm.bazaar.UserAreaActivity
-ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:51:9-68
+ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:48:9-54
 	android:name
-		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:51:19-65
+		ADDED from C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\src\main\AndroidManifest.xml:48:19-51
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Clarence Ng\Desktop\UVM Homework\2016-2017\CS275\gamerhub\Bazaar\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\AndroidManifest.xml:19:9-172
 	android:exported

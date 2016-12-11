@@ -96,16 +96,20 @@
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
+        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_result_notification.xml",
+        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\src\\main\\res\\layout\\activity_result_notification.xml"
+    },
+    {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.0\\res\\layout\\design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
@@ -118,6 +122,10 @@
     {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_result_notification.xml",
+        "source": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\src\\main\\res\\layout\\content_result_notification.xml"
     },
     {
         "merged": "C:\\Users\\Clarence Ng\\Desktop\\UVM Homework\\2016-2017\\CS275\\gamerhub\\Bazaar\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_custom.xml",

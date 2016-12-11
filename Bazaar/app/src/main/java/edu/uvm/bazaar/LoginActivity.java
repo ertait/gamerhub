@@ -32,16 +32,18 @@ public class LoginActivity extends AppCompatActivity {
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final Button bLogin = (Button) findViewById(R.id.bLogin);
         final TextView registerLink = (TextView) findViewById(R.id.tvRegisterHere);
-        final TextView notificationLink = (TextView) findViewById(R.id.tvNotification);
+        final Button bNotifications = (Button) findViewById(R.id.bNotifications);
 
-        notificationLink.setOnClickListener(
+        bNotifications.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent notificationIntent = new Intent(LoginActivity.this, Notification.class);
+                        Intent notificationIntent = new Intent(LoginActivity.this, appNotification.class);
                         LoginActivity.this.startActivity(notificationIntent);
                     }
                 });
+
+
         registerLink.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
