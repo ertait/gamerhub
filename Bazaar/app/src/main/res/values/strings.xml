@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Bazaar</string>
+    <string name="title_activity_developer_login">DeveloperLoginActivity</string>
 </resources>

@@ -54,16 +54,32 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONArray response) {
                                 // display response
+//                                AlertDialog.Builder text = new AlertDialog.Builder(LoginActivity.this);
+//                                try {
+//                                    text.setMessage(response.getJSONObject(0).toString()+ " "+response.getJSONObject(1).toString()).setNegativeButton("Retry", null).create().show();
+//                                } catch (JSONException e) {
+//                                    e.printStackTrace();
+//                                }
                                 try {
                                     JSONObject jsonResponse = null;
+//                                    JSONObject jsonDeveloper = null;
                                     if (response.length() > 0) {
                                         jsonResponse = response.getJSONObject(0);
 
                                     }
+//                                    if (response.length() > 2) {
+//                                        jsonDeveloper = response.getJSONObject(2);
+//
+//                                    }
 
-                                    if (jsonResponse != null && jsonResponse.getString("fldPassword").equals(password)){
-                                        Intent registerIntent = new Intent(LoginActivity.this, UserAreaActivity.class);
-                                        LoginActivity.this.startActivity(registerIntent);
+                                        if (jsonResponse != null && jsonResponse.getString("fldPassword").equals(password)){
+                                            if ( jsonResponse.getString("devStatus").equals("1")) {
+                                                Intent registerIntent = new Intent(LoginActivity.this, DeveloperLoginActivity.class);
+                                                LoginActivity.this.startActivity(registerIntent);
+                                            }else{
+                                                Intent registerIntent = new Intent(LoginActivity.this, UserAreaActivity.class);
+                                                LoginActivity.this.startActivity(registerIntent);
+                                            }
                                     }
                                     else if (jsonResponse == null){
                                         AlertDialog.Builder rspns = new AlertDialog.Builder(LoginActivity.this);
