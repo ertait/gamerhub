@@ -35,7 +35,7 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/subGames"
+        android:layout_below="@+id/devGames"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/subGamesList"/>
@@ -54,45 +54,58 @@
         android:layout_alignEnd="@+id/usrnme" />
 
     <TextView
-        android:text="Subscribed Games"
+        android:text="Subscribed Groups"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/subGames"
-        tools:text="Subscribed Games"
+        android:id="@+id/subGroups"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:layout_below="@+id/profilepic"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBottom="@+id/subgroupslist"
+        android:layout_alignRight="@+id/devGames"
+        android:layout_alignEnd="@+id/devGames" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/subgroupslist"
-        android:layout_marginBottom="176dp"
+        android:layout_marginBottom="111dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Subscribed Groups"
+        android:text="Subscribed Games"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/subGroups"
+        android:id="@+id/devGames"
+        tools:text="Subscribed Games"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:layout_above="@+id/subgroupslist"
-        android:layout_alignRight="@+id/subGames"
-        android:layout_alignEnd="@+id/subGames" />
+        android:layout_marginTop="96dp"
+        android:layout_below="@+id/profilepic"
+        android:layout_toLeftOf="@+id/btGames"
+        android:layout_toStartOf="@+id/btGames" />
+
+    <Button
+        android:text="Developer "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userDevelBtn"
+        android:visibility="invisible"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_below="@+id/tvWelcomeMsg"
+        android:layout_alignLeft="@+id/devGames"
+        android:layout_alignStart="@+id/devGames"
+        android:layout_marginTop="45dp" />
 
     <Button
         android:text="Games List"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btGames"
-        android:layout_marginLeft="36dp"
-        android:layout_marginStart="36dp"
-        android:layout_below="@+id/tvWelcomeMsg"
-        android:layout_alignLeft="@+id/tvWelcomeMsg"
-        android:layout_alignStart="@+id/tvWelcomeMsg"
-        android:layout_marginTop="10dp" />
+        android:layout_alignBaseline="@+id/userDevelBtn"
+        android:layout_alignBottom="@+id/userDevelBtn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

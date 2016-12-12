@@ -11,45 +11,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.uvm.bazaar.EmptyGameProfile">
 
-    <TextView
-        android:text="Title of Game"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:id="@+id/title" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:text="This is where the description of the game will go"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/title"
-        android:layout_alignLeft="@+id/threadsbutton"
-        android:layout_alignStart="@+id/threadsbutton" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_dark_frame"
-        android:id="@+id/gamePicture"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="17dp" />
 
     <Button
         android:text="Threads"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/threadsbutton"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="94dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="the description of the game goes here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        tools:text="the description of the game goes here"
+        android:textAppearance="@android:style/TextAppearance.Holo.Large"
+        android:layout_toStartOf="@+id/threadsbutton"
+        android:layout_above="@+id/threadsbutton"
+        android:layout_below="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/alert_dark_frame"
+        android:id="@+id/gamePicture"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Title of Game"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginTop="64dp"
+        android:id="@+id/title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_below="@+id/gamePicture"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

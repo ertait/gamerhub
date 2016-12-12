@@ -62,8 +62,23 @@ public class LoginActivity extends AppCompatActivity {
                                     }
 
                                     if (jsonResponse != null && jsonResponse.getString("fldPassword").equals(password)){
-                                        Intent registerIntent = new Intent(LoginActivity.this, UserAreaActivity.class);
-                                        LoginActivity.this.startActivity(registerIntent);
+                                        if ( jsonResponse.getString("devStatus").equals("A")) {
+                                            Intent registerIntent = new Intent(LoginActivity.this, DeveloperAreaActivity.class);
+                                            registerIntent.putExtra("UserId",jsonResponse.getString("pmkUserID"));
+                                            registerIntent.putExtra("Username",password);
+                                            registerIntent.putExtra("devStatus",jsonResponse.getString("devStatus"));
+                                            LoginActivity.this.startActivity(registerIntent);
+                                        }
+//                                        else if (jsonResponse.getString("devStatus").equals("U")){
+//                                            Intent registerIntent = new Intent(LoginActivity.this, DevUser.class);
+//                                            LoginActivity.this.startActivity(registerIntent);
+//                                        }
+                                        else{
+                                            Intent registerIntent = new Intent(LoginActivity.this, UserAreaActivity.class);
+                                            registerIntent.putExtra("UserId",jsonResponse.getString("pmkUserID"));
+                                            registerIntent.putExtra("Username",password);
+                                            LoginActivity.this.startActivity(registerIntent);
+                                        }
                                     }
                                     else if (jsonResponse == null){
                                         AlertDialog.Builder rspns = new AlertDialog.Builder(LoginActivity.this);

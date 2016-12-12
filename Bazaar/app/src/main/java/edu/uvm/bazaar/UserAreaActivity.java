@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -27,19 +26,52 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
+        String username ="";
+        String devStatus ="";
+        String userId ="";
+        Bundle extra = getIntent().getExtras();
+        if (extra != null){
+            username = extra.getString("username");
+            userId = extra.getString("UserId");
+            devStatus = extra.getString("devStatus");
 
-        final EditText etUsername = (EditText) findViewById(R.id.etUsername);
+        }
+
+        final TextView etUsername = (TextView) findViewById(R.id.usrnme);
+        etUsername.setText(username);
         final TextView welcomeMessage = (TextView) findViewById(R.id.tvWelcomeMsg);
         final TextView subgroups = (TextView) findViewById(R.id.subGroups);
-        final TextView subgames = (TextView) findViewById(R.id.subGames);
+        final TextView subgames = (TextView) findViewById(R.id.devGames);
         final GridLayout subgameslist = (GridLayout) findViewById(R.id.subGamesList);
         final LinearLayout subgroupslist = (LinearLayout) findViewById(R.id.subgroupslist);
         final Button gamelist = (Button) findViewById(R.id.btGames);
+        final Button devel = (Button) findViewById(R.id.userDevelBtn);
         IprofilePic = (ImageView) findViewById(R.id.profilepic);
+        final String finalUsername = username;
+
+        //THIS IS WHERE THERE NEEDS TO BE A CALL TO THE DATABASE TO PULL ALL OF THE GAMES AND THREADS THAT A USER IS SUBSCRIBED TO.
+        if (devStatus==("U")){
+            devel.setVisibility(View.VISIBLE);
+            final String finalDevStatus = devStatus;
+            final String finalUsername1 = username;
+            final String finalUserId = userId;
+            devel.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View view) {
+                    Intent userDevel = new Intent(UserAreaActivity.this, UserDeveloperActivity.class);
+                    userDevel.putExtra("username", finalUsername1);
+                    userDevel.putExtra("devStatus", finalDevStatus);
+                    userDevel.putExtra("userId", finalUserId);
+                }
+            });
+            //SET BUTTON IN USER PAGE THAT LINKS TO DEVELOPMENT PAGE
+        }
         gamelist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent registerIntent = new Intent(UserAreaActivity.this, Games.class);
+                registerIntent.putExtra("username", finalUsername);
                 UserAreaActivity.this.startActivity(registerIntent);
             }
         });
