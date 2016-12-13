@@ -52,7 +52,7 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
         ArrayList<String> subThreads = new ArrayList<>();
         Bundle extra = getIntent().getExtras();
         if (extra != null){
-            username = extra.getString("username");
+            username = extra.getString("Username");
             userId = extra.getString("UserId");
             devStatus = extra.getString("devStatus");
             subThreads = extra.getStringArrayList("subThreads");
@@ -64,7 +64,7 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
         final TextView welcomeMessage = (TextView) findViewById(R.id.tvWelcomeMsg);
         final TextView subgroups = (TextView) findViewById(R.id.subGroups);
         final TextView subgames = (TextView) findViewById(R.id.devGames);
-        final ListView subgameslist = (ListView) findViewById(R.id.subGamesList);
+//        final ListView subgameslist = (ListView) findViewById(R.id.subGamesList);
         final ListView subgroupslist = (ListView) findViewById(R.id.subGroupList);
         final Button gamelist = (Button) findViewById(R.id.btGames);
 //        final Button devel = (Button) findViewById(R.id.userDevelBtn);
@@ -178,36 +178,36 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
 
         subgroupslist.setAdapter(adapter);
         final String finalUserId2 = userId;
-        subgameslist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(final AdapterView<?> parent, View v,
-                                    final int position, long id) {
-                final String gameTitle = (String)parent.getItemAtPosition(position);
-                String imageId="";
-                switch (gameTitle){
-                    case "No Man Sky":
-                        imageId = "nomansky";
-                        break;
-                    case "League of Legends":
-                        imageId = "league";
-                        break;
-                    case "Civilization Beyond Earth":
-                        imageId = "civ";
-                        break;
-                    case "World of Warcraft":
-                        imageId = "wow";
-                }
-                Intent intent = new Intent(UserAreaActivity.this,EmptyGameProfile.class);
-                intent.putExtra("imageId",imageId);
-                intent.putExtra("userId", finalUserId2);
-                intent.putExtra("TITLE",gameTitle);
-                startActivity(intent);
-
-
-            }
-        });
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,subGames);
-
-        subgameslist.setAdapter(adapter2);
+//        subgameslist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            public void onItemClick(final AdapterView<?> parent, View v,
+//                                    final int position, long id) {
+//                final String gameTitle = (String)parent.getItemAtPosition(position);
+//                String imageId="";
+//                switch (gameTitle){
+//                    case "No Man Sky":
+//                        imageId = "nomansky";
+//                        break;
+//                    case "League of Legends":
+//                        imageId = "league";
+//                        break;
+//                    case "Civilization Beyond Earth":
+//                        imageId = "civ";
+//                        break;
+//                    case "World of Warcraft":
+//                        imageId = "wow";
+//                }
+//                Intent intent = new Intent(UserAreaActivity.this,EmptyGameProfile.class);
+//                intent.putExtra("imageId",imageId);
+//                intent.putExtra("userId", finalUserId2);
+//                intent.putExtra("TITLE",gameTitle);
+//                startActivity(intent);
+//
+//
+//            }
+//        });
+//        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,subGames);
+//
+//        subgameslist.setAdapter(adapter2);
         final String finalUserId1 = userId;
         gamelist.setOnClickListener(new View.OnClickListener() {
             @Override

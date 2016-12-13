@@ -68,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                     if (jsonResponse != null && jsonResponse.getString("fldPassword").equals(password)){
                                         if ( jsonResponse.getString("devStatus").equals("A")) {
+                                            userId = jsonResponse.getString("pmkUserID");
                                             String url = "http://www.uvm.edu/~ertait/getDevGames.php?userId="+jsonResponse.getString("pmkUserID");
                                             RequestQueue threadQueue = Volley.newRequestQueue(LoginActivity.this);
                                             JsonArrayRequest threadRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
@@ -86,60 +87,23 @@ public class LoginActivity extends AppCompatActivity {
                                                                 jsonResponse = response.getJSONObject(i);
                                                                 String g=(String)jsonResponse.get("fldTitle");
                                                                 devGames.add(g);
-//                                                                if (jsonResponse.has("txtThreadTitle")){
-//                                                                    String u = (String) jsonResponse.getString("txtThreadTitle");
-//                                                                    subThreads.add(u);
-//                                                                }else if (jsonResponse.has("fldTitle")){
-//                                                                    String t = (String) jsonResponse.getString("fldTitle");
-//                                                                    subGames.add(t);
+
 //                                                                }
 
                                                             }
-//                                AlertDialog.Builder rspns = new AlertDialog.Builder(LoginActivity.this);
-//                                rspns.setMessage(response.toString()).setNegativeButton("Retry", null).create().show();
 
-//                        JSONArray jsonArray = (JSONArray)jsonResponse;
-//                        if (response != null) {
-//                            int len = response.length();
-//                            for (int i=0;i<len;i++){
-//                                try {
-//                                    values.add(response.get(i).toString());
-//                                } catch (JSONException e) {
-//                                    e.printStackTrace();
-//                                }
-//                            }
-//                        }
-
-
-//                        }
                                                         }
+//                                                        userId = jsonResponse.getString("pmkUserID");
                                                         Intent registerIntent = new Intent(LoginActivity.this, DeveloperAreaActivity.class);
 //                                            userId = jsonResponse.getString("pmkUserID");
                                             registerIntent.putExtra("UserId",userId);
                                             registerIntent.putExtra("Username",username);
                                             registerIntent.putExtra("devGames",devGames);
+//                                                        AlertDialog.Builder rspns = new AlertDialog.Builder(LoginActivity.this);
+//                                                        rspns.setMessage("id?"+userId).setNegativeButton("Retry", null).create().show();
 //                                            registerIntent.putExtra("devStatus",jsonResponse.getString("devStatus"));
                                             LoginActivity.this.startActivity(registerIntent);
-                                                        //THIS NEEDS TO GET THE SUB THREADS AND THEN PASS THEM TO THE THREAD CLASS TO DISPLAY
-//                                                        Intent registerIntent = new Intent(LoginActivity.this, UserAreaActivity.class);
-//                                                        registerIntent.putExtra("UserId",userId);
-//                                                        registerIntent.putExtra("Username",username);
-//                                                        registerIntent.putExtra("subThreads",subThreads);
-//                                                        registerIntent.putExtra("subGames",subGames);
-//                                                        LoginActivity.this.startActivity(registerIntent);
 
-
-                                                        ;
-//                                                        startActivity(registerIntent);
-//                    AlertDialog.Builder rspns = new AlertDialog.Builder(LoginActivity.this);
-//                    rspns.setMessage(subGames.toString()+subThreads.toString()+userId).setNegativeButton("Retry", null).create().show();
-//                                                        if (jsonResponse != null){
-////                        JSONArray array = (JSONArray)jsonResponse;
-////                                for (int i=0;i<response.length();i++){
-//////                                    values.add(response.getString(i));
-//
-////
-//                                                        }
 
                                                     } catch (JSONException e) {
                                                         e.printStackTrace();
@@ -187,23 +151,7 @@ public class LoginActivity extends AppCompatActivity {
                                                                 }
 
                                                             }
-//                                AlertDialog.Builder rspns = new AlertDialog.Builder(LoginActivity.this);
-//                                rspns.setMessage(response.toString()).setNegativeButton("Retry", null).create().show();
 
-//                        JSONArray jsonArray = (JSONArray)jsonResponse;
-//                        if (response != null) {
-//                            int len = response.length();
-//                            for (int i=0;i<len;i++){
-//                                try {
-//                                    values.add(response.get(i).toString());
-//                                } catch (JSONException e) {
-//                                    e.printStackTrace();
-//                                }
-//                            }
-//                        }
-
-
-//                        }
                                                         }
                                                         //THIS NEEDS TO GET THE SUB THREADS AND THEN PASS THEM TO THE THREAD CLASS TO DISPLAY
                                                         Intent registerIntent = new Intent(LoginActivity.this, UserAreaActivity.class);
@@ -215,13 +163,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                                                         ;
-//                                                        startActivity(registerIntent);
-//                    AlertDialog.Builder rspns = new AlertDialog.Builder(LoginActivity.this);
-//                    rspns.setMessage(subGames.toString()+subThreads.toString()+userId).setNegativeButton("Retry", null).create().show();
-//                                                        if (jsonResponse != null){
-////                        JSONArray array = (JSONArray)jsonResponse;
-////                                for (int i=0;i<response.length();i++){
-//////                                    values.add(response.getString(i));
+
 //
 ////
 //                                                        }

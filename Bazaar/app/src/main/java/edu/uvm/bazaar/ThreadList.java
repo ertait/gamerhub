@@ -123,8 +123,8 @@ public class ThreadList extends AppCompatActivity {
 
                                 ;
                             startActivity(intent);
-//                    AlertDialog.Builder rspns = new AlertDialog.Builder(EmptyGameProfile.this);
-//                    rspns.setMessage(response.toString()+jsonResponse.getString("txtThreadName").getClass().getName()+"values:"+values).setNegativeButton("Retry", null).create().show();
+//                    AlertDialog.Builder rspns = new AlertDialog.Builder(ThreadList.this);
+//                    rspns.setMessage(finalUserId2).setNegativeButton("Retry", null).create().show();
                             if (jsonResponse != null){
 //                        JSONArray array = (JSONArray)jsonResponse;
 //                                for (int i=0;i<response.length();i++){
@@ -221,8 +221,8 @@ public class ThreadList extends AppCompatActivity {
                                             intent.putExtra("values", finalValues);
                                             intent.putExtra("title", finalTitle);
                                             intent.putExtra("userId", finalUserId1);
-//                                AlertDialog.Builder rspns = new AlertDialog.Builder(EmptyGameProfile.this);
-//                                rspns.setMessage(values.toString()).setNegativeButton("Retry", null).create().show();
+//                                AlertDialog.Builder rspns = new AlertDialog.Builder(ThreadList.this);
+//                                rspns.setMessage(finalUserId1).setNegativeButton("Retry", null).create().show();
                                             startActivity(intent);
 //
                                         }

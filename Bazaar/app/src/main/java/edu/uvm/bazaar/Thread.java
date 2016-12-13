@@ -86,6 +86,8 @@ public class Thread extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View view) {
+//                AlertDialog.Builder rspns = new AlertDialog.Builder(Thread.this);
+//                rspns.setMessage(finalUserId).setNegativeButton("Retry", null).create().show();
 
                 final Response.Listener<String> responseListener = new Response.Listener<String>() {
 
@@ -111,6 +113,8 @@ public class Thread extends AppCompatActivity {
                                             String c = u+": "+r;
                                             finalComments.add(c);
                                         }
+//                                        AlertDialog.Builder rspns = new AlertDialog.Builder(Thread.this);
+//                                        rspns.setMessage(finalUserId).setNegativeButton("Retry", null).create().show();
 
                                     }
 
@@ -124,7 +128,7 @@ public class Thread extends AppCompatActivity {
 
                                     ;
 //                                    AlertDialog.Builder rspns = new AlertDialog.Builder(Thread.this);
-//                               rspns.setMessage(finalComments.toString()+response.toString()+finalGameId).setNegativeButton("Retry", null).create().show();
+//                               rspns.setMessage(finalUserId).setNegativeButton("Retry", null).create().show();
                                     startActivity(intent);
 //                    AlertDialog.Builder rspns = new AlertDialog.Builder(EmptyGameProfile.this);
 //                    rspns.setMessage(response.toString()+jsonResponse.getString("txtThreadName").getClass().getName()+"values:"+values).setNegativeButton("Retry", null).create().show();
@@ -154,10 +158,11 @@ public class Thread extends AppCompatActivity {
                 EditText postText = (EditText) findViewById(R.id.editText);
                 String threadText = postText.getText().toString();
 //                AlertDialog.Builder builder = new AlertDialog.Builder(Thread.this);
-//                builder.setMessage("gameid:"+finalGameId+" ").create().show();
+//                builder.setMessage("userid:"+finalUserId+" ").create().show();
                 PostComment thread = new PostComment(finalGameId, finalUserId, finalThreadTitle, threadText, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Thread.this);
                 queue.add(thread);
+
                 String subject ="New Post";
                 String body = "A thread you subscribe to has been updated!";
                 NotificationManager notif=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
