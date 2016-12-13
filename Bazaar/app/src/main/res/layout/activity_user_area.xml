@@ -32,13 +32,24 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <GridLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:text="Subscribed Games"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/devGames"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/subGamesList"/>
+        android:id="@+id/devGames"
+        tools:text="Subscribed Games"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="96dp"
+        android:layout_below="@+id/profilepic"
+        android:layout_toLeftOf="@+id/btGames"
+        android:layout_toStartOf="@+id/btGames" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/subGroups"
+        android:id="@+id/subGamesList"
+        android:layout_below="@+id/devGames" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -52,38 +63,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/usrnme"
         android:layout_alignEnd="@+id/usrnme" />
-
-    <TextView
-        android:text="Subscribed Groups"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/subGroups"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:layout_alignBottom="@+id/subgroupslist"
-        android:layout_alignRight="@+id/devGames"
-        android:layout_alignEnd="@+id/devGames" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/subgroupslist"
-        android:layout_marginBottom="111dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Subscribed Games"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/devGames"
-        tools:text="Subscribed Games"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:layout_marginTop="96dp"
-        android:layout_below="@+id/profilepic"
-        android:layout_toLeftOf="@+id/btGames"
-        android:layout_toStartOf="@+id/btGames" />
 
     <Button
         android:text="Developer "
@@ -107,5 +86,22 @@
         android:layout_alignBottom="@+id/userDevelBtn"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Subscribed Groups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subGroups"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="115dp"
+        android:layout_below="@+id/devGames"
+        android:layout_alignRight="@+id/devGames"
+        android:layout_alignEnd="@+id/devGames" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/subGroups"
+        android:id="@+id/subGroupList" />
 
 </RelativeLayout>

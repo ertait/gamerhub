@@ -13,7 +13,7 @@ if ($_GET) {
     $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
 
     //build our query
-    $query = "select fldGenre from tblVideoGame where fldTitle = ?";
+    $query = "select fldGenre,pmkGameId from tblVideoGame where fldTitle = ?";
     $parameters = array($name);
     //execute the query on the database object
     $results = $thisDatabaseReader->select($query, $parameters, 1, 0, 0, 0, false, false);

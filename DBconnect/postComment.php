@@ -15,9 +15,11 @@
     $thisDatabaseAdmin = new Database($dbUserName, $whichPass, $dbName);
     
     
-        $gameid = $_POST["gameId"];
-    $userid = $_POST["userId"];
-    $title = $_POST["title"];
+        $threadName = $_POST["threadName"];
+        $gameId=$_POST["gameId"];
+    $userId = $_POST["userId"];
+//    $title = $_POST["title"];
+    $text=$_POST["text"];
 //    $text = $_POST["text"];
 //        $gameid = "2";
 //        $userid= "8";
@@ -32,19 +34,11 @@
 	
 	//build and execute the query
    
-	$query = "insert into tblCallofDuty4Threads(fnkGameId, fnkUserId, txtThreadName) VALUES (?, ?, ?)";
-	$parameters = array($gameid, $userid, $title);
+	$query = "insert into tblCallofDuty4Threads(fnkGameId, fnkUserId, txtThreadName, txtThread) VALUES (?, ?, ?,?)";
+	$parameters = array($gameId, $userId, $threadName, $text);
 	$result = $thisDatabaseWriter->insert($query, $parameters, 0,0,0,0,false,false);
 
-//$query = "CREATE TABLE IF NOT EXISTS tblDoomThreads (
-//    fnkGameId int(11) NOT NULL,
-//    pmkPostId int(11) NOT NULL AUTO_INCREMENT
-//    numThreadNum int(11) NOT NULL,
-//    txtThread text NOT NULL,
-//    fnkUserId int(11) NOT NULL,
-//    txtThreadName varchar(500) NOT NULL,
-//    PRIMARY KEY (pmkPostId)
-//    )"
+
 
 header( 'HTTP/1.1 201: Resource Created' );
 ?>

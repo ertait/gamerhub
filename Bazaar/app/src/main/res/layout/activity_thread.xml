@@ -56,7 +56,7 @@
         android:layout_toLeftOf="@+id/button2"
         android:layout_toStartOf="@+id/button2"
         android:layout_alignBottom="@+id/button2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 
 </RelativeLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,10 +24,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 import edu.uvm.loginregister.R;
 
 public class EmptyGameProfile extends AppCompatActivity {
-
+    String GAMEID;
+    ArrayList<String> values = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +40,17 @@ public class EmptyGameProfile extends AppCompatActivity {
         final TextView titleSpace = (TextView) findViewById(R.id.title);
         final TextView description = (TextView) findViewById(R.id.description);
         final ImageView imageView = (ImageView) findViewById(R.id.gamePicture);
+
         String title = "";
         String username ="";
         String imageId ="";
+        String userId ="";
         Bundle extra = getIntent().getExtras();
         if (extra != null){
             title = extra.getString("TITLE");
             username = extra.getString("username");
             imageId = extra.getString("imageId");
+            userId = extra.getString("userId");
         }
 
         //title = "new title";
@@ -96,6 +103,7 @@ public class EmptyGameProfile extends AppCompatActivity {
                             }
                             if (jsonResponse != null){
                                 description.setText(jsonResponse.getString("fldGenre"));
+                                GAMEID = jsonResponse.getString("pmkGameId");
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -112,12 +120,79 @@ public class EmptyGameProfile extends AppCompatActivity {
             });
                 getGame.add(gameRequest);
         final Button threadsbutton = (Button)findViewById(R.id.threadsbutton);
+        final String finalUsername = username;
+        final String finalTitle = title;
+        final String finalUserId = userId;
         threadsbutton.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(EmptyGameProfile.this, ThreadList.class);
+                String url = "http://www.uvm.edu/~ertait/getGameThreads.php?gameId="+ GAMEID;
+                RequestQueue threadQueue = Volley.newRequestQueue(EmptyGameProfile.this);
+                JsonArrayRequest threadRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+
+//
+//                ArrayList<String> list = new ArrayList<String>();
+
+                        try {
+                            JSONObject jsonResponse = null;
+                            values.clear();
+                            if (response.length() > 0) {
+                        for (int i = 0; i < response.length(); i++) {
+                            jsonResponse = response.getJSONObject(i);
+                            String r = (String) jsonResponse.getString("txtThreadName");
+                            values.add(r);
+                        }
+//                        JSONArray jsonArray = (JSONArray)jsonResponse;
+//                        if (response != null) {
+//                            int len = response.length();
+//                            for (int i=0;i<len;i++){
+//                                try {
+//                                    values.add(response.get(i).toString());
+//                                } catch (JSONException e) {
+//                                    e.printStackTrace();
+//                                }
+//                            }
+//                        }
+
+
+//                        }
+                            }
+//                    AlertDialog.Builder rspns = new AlertDialog.Builder(EmptyGameProfile.this);
+//                    rspns.setMessage(response.toString()+jsonResponse.getString("txtThreadName").getClass().getName()+"values:"+values).setNegativeButton("Retry", null).create().show();
+                            if (jsonResponse != null){
+//                        JSONArray array = (JSONArray)jsonResponse;
+//                                for (int i=0;i<response.length();i++){
+////                                    values.add(response.getString(i));
+                                Intent intent = new Intent(EmptyGameProfile.this, ThreadList.class);
+                                intent.putExtra("gameId",GAMEID);
+                                intent.putExtra("userId", finalUserId);
+                                intent.putExtra("username", finalUsername);
+                                intent.putExtra("values",values);
+                                intent.putExtra("title", finalTitle);
+//                                AlertDialog.Builder rspns = new AlertDialog.Builder(EmptyGameProfile.this);
+//                                rspns.setMessage(values.toString()).setNegativeButton("Retry", null).create().show();
                 startActivity(intent);
+//
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        AlertDialog.Builder rspns = new AlertDialog.Builder(EmptyGameProfile.this);
+                        rspns.setMessage(error.toString()).setNegativeButton("Retry", null).create().show();
+                    }
+                });
+                threadQueue.add(threadRequest);
+
+
             }
         });
     }

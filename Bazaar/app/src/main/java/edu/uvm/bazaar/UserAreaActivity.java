@@ -8,12 +8,17 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.content.Intent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import edu.uvm.loginregister.R;
 
@@ -29,12 +34,13 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
         String username ="";
         String devStatus ="";
         String userId ="";
+        ArrayList<String> subThreads = new ArrayList<>();
         Bundle extra = getIntent().getExtras();
         if (extra != null){
             username = extra.getString("username");
             userId = extra.getString("UserId");
             devStatus = extra.getString("devStatus");
-
+            subThreads = extra.getStringArrayList("subThreads");
         }
 
         final TextView etUsername = (TextView) findViewById(R.id.usrnme);
@@ -42,36 +48,41 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
         final TextView welcomeMessage = (TextView) findViewById(R.id.tvWelcomeMsg);
         final TextView subgroups = (TextView) findViewById(R.id.subGroups);
         final TextView subgames = (TextView) findViewById(R.id.devGames);
-        final GridLayout subgameslist = (GridLayout) findViewById(R.id.subGamesList);
-        final LinearLayout subgroupslist = (LinearLayout) findViewById(R.id.subgroupslist);
+        final ListView subgameslist = (ListView) findViewById(R.id.subGamesList);
+        final ListView subgroupslist = (ListView) findViewById(R.id.subGroupList);
         final Button gamelist = (Button) findViewById(R.id.btGames);
         final Button devel = (Button) findViewById(R.id.userDevelBtn);
         IprofilePic = (ImageView) findViewById(R.id.profilepic);
         final String finalUsername = username;
 
         //THIS IS WHERE THERE NEEDS TO BE A CALL TO THE DATABASE TO PULL ALL OF THE GAMES AND THREADS THAT A USER IS SUBSCRIBED TO.
-        if (devStatus==("U")){
-            devel.setVisibility(View.VISIBLE);
-            final String finalDevStatus = devStatus;
-            final String finalUsername1 = username;
-            final String finalUserId = userId;
-            devel.setOnClickListener(new View.OnClickListener(){
+//        if (devStatus==("U")){
+//            devel.setVisibility(View.VISIBLE);
+//            final String finalDevStatus = devStatus;
+//            final String finalUsername1 = username;
+//            final String finalUserId = userId;
+//            devel.setOnClickListener(new View.OnClickListener(){
+//
+//                @Override
+//                public void onClick(View view) {
+//                    Intent userDevel = new Intent(UserAreaActivity.this, UserDeveloperActivity.class);
+//                    userDevel.putExtra("username", finalUsername1);
+//                    userDevel.putExtra("devStatus", finalDevStatus);
+//                    userDevel.putExtra("userId", finalUserId);
+//                }
+//            });
+//            //SET BUTTON IN USER PAGE THAT LINKS TO DEVELOPMENT PAGE
+//        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,subThreads);
 
-                @Override
-                public void onClick(View view) {
-                    Intent userDevel = new Intent(UserAreaActivity.this, UserDeveloperActivity.class);
-                    userDevel.putExtra("username", finalUsername1);
-                    userDevel.putExtra("devStatus", finalDevStatus);
-                    userDevel.putExtra("userId", finalUserId);
-                }
-            });
-            //SET BUTTON IN USER PAGE THAT LINKS TO DEVELOPMENT PAGE
-        }
+        subgroupslist.setAdapter(adapter);
+        final String finalUserId1 = userId;
         gamelist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent registerIntent = new Intent(UserAreaActivity.this, Games.class);
                 registerIntent.putExtra("username", finalUsername);
+                registerIntent.putExtra("userId", finalUserId1);
                 UserAreaActivity.this.startActivity(registerIntent);
             }
         });

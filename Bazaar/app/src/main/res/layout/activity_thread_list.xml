@@ -35,7 +35,7 @@
         android:layout_toLeftOf="@+id/addThread"
         android:layout_toStartOf="@+id/addThread"
         android:layout_above="@+id/list"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 
 </RelativeLayout>

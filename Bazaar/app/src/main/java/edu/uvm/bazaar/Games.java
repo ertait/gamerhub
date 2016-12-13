@@ -26,11 +26,14 @@ public class Games extends AppCompatActivity {
         final GridView gridview = (GridView) findViewById(R.id.gameview);
         gridview.setAdapter(new ImageAdapter(this));
         String username ="";
+        String userId ="";
         Bundle extra = getIntent().getExtras();
         if (extra != null){
             username = extra.getString("username");
+            userId = extra.getString("userId");
         }
         final String finalUsername = username;
+        final String finalUserId = userId;
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public String title="";
             public String imageId = "";
@@ -66,6 +69,7 @@ public class Games extends AppCompatActivity {
                 intent.putExtra("TITLE",title);
                 intent.putExtra("username", finalUsername);
                 intent.putExtra("imageId",imageId );
+                intent.putExtra("userId", finalUserId);
                 startActivity(intent);
 
             }

@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.List;
+
 import edu.uvm.loginregister.R;
 
 public class DeveloperAreaActivity extends AppCompatActivity {
@@ -19,6 +21,7 @@ public class DeveloperAreaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_developer_area);
+
         String username ="";
         String devStatus ="";
         String userId ="";

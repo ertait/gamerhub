@@ -4,9 +4,9 @@ require_once "constants.php";
 require_once "pass.php";
 require_once "Database.php";
 //if ($_GET) {
-//    $name = $_GET["username"];
-//    $pass = $_GET["password"];
-    $name = "ertait";
+    $name = $_GET["username"];
+    $pass = $_GET["password"];
+//    $name = "ertait";
 //    $pass = "liveloveswing";
     $dbUserName = "ispizize_reader";
     $whichPass = "r"; //flag for which one to use.
