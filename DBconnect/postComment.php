@@ -8,14 +8,19 @@
 
     //create the database writerObject
     //$dbUserName = get_current_user() . '_writer';
-    $dbUserName = "ispizize_writer";
-    $whichPass = "a"; //flag for which one to use.
+    $dbUserName = "ispizize_reader";
+    $whichPass = "r"; //flag for which one to use.
     //$dbName = DATABASE_NAME;
     $dbName = "ISPIZIZE_GameHub";
-    $thisDatabaseAdmin = new Database($dbUserName, $whichPass, $dbName);
+    $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
     
     
-        $threadName = $_POST["threadName"];
+//        
+//    $gameId="none";
+//    $threadName="If only";
+//    $userId = "8";
+//    $text = "testing null gameId";
+    $threadName = $_POST["threadName"];
         $gameId=$_POST["gameId"];
     $userId = $_POST["userId"];
 //    $title = $_POST["title"];
@@ -31,13 +36,27 @@
 	//$dbName = DATABASE_NAME;
         $dbName = "ISPIZIZE_GameHub";
 	$thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
-	
+        $getGameId ="";
+	if ($gameId == "none"){
+            $query = "select fnkGameId from tblCallofDuty4Threads where txtThreadName = ?";
+            $params = array($threadName);
+            $results = $thisDatabaseReader->select($query, $params, 1, 0, 0, 0, false, false);
+        if (!empty($results) && $results[0] != " ") {
+        foreach ($results as $val) {
+
+            $getGameId = $gameId . $val[0];
+        }
+        
+    }
+        $gameId = $getGameId;
+        }
 	//build and execute the query
-   
+        
 	$query = "insert into tblCallofDuty4Threads(fnkGameId, fnkUserId, txtThreadName, txtThread) VALUES (?, ?, ?,?)";
+//        echo $query;
 	$parameters = array($gameId, $userId, $threadName, $text);
 	$result = $thisDatabaseWriter->insert($query, $parameters, 0,0,0,0,false,false);
-
+        
 
 
 header( 'HTTP/1.1 201: Resource Created' );

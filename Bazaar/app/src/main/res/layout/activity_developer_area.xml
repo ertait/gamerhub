@@ -10,14 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.uvm.bazaar.DeveloperAreaActivity">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/subGamesList"
-        android:layout_below="@+id/devGames" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,5 +61,21 @@
         android:layout_marginTop="79dp"
         android:layout_below="@+id/profilepic"
         android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/devGames"
+        android:layout_above="@+id/devGameList"
+        android:id="@+id/listDevGames"/>
+
+    <Button
+        android:text="Invite User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listDevGames"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/invite" />
 
 </RelativeLayout>

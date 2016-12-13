@@ -42,13 +42,13 @@ public class EmptyGameProfile extends AppCompatActivity {
         final ImageView imageView = (ImageView) findViewById(R.id.gamePicture);
 
         String title = "";
-        String username ="";
+//        String username ="";
         String imageId ="";
         String userId ="";
         Bundle extra = getIntent().getExtras();
         if (extra != null){
             title = extra.getString("TITLE");
-            username = extra.getString("username");
+//            username = extra.getString("username");
             imageId = extra.getString("imageId");
             userId = extra.getString("userId");
         }
@@ -120,7 +120,7 @@ public class EmptyGameProfile extends AppCompatActivity {
             });
                 getGame.add(gameRequest);
         final Button threadsbutton = (Button)findViewById(R.id.threadsbutton);
-        final String finalUsername = username;
+//        final String finalUsername = username;
         final String finalTitle = title;
         final String finalUserId = userId;
         threadsbutton.setOnClickListener(new View.OnClickListener(){
@@ -169,7 +169,7 @@ public class EmptyGameProfile extends AppCompatActivity {
                                 Intent intent = new Intent(EmptyGameProfile.this, ThreadList.class);
                                 intent.putExtra("gameId",GAMEID);
                                 intent.putExtra("userId", finalUserId);
-                                intent.putExtra("username", finalUsername);
+//                                intent.putExtra("username", finalUsername);
                                 intent.putExtra("values",values);
                                 intent.putExtra("title", finalTitle);
 //                                AlertDialog.Builder rspns = new AlertDialog.Builder(EmptyGameProfile.this);

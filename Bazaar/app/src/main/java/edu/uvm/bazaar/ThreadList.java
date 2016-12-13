@@ -40,14 +40,14 @@ public class ThreadList extends AppCompatActivity {
         ListView listView =(ListView) findViewById(R.id.list);
         final TextView titleText = (TextView) findViewById(R.id.name);
         String gameId="";
-        String username="";
+//        String username="";
         String title="";
         String userId="";
         ArrayList<String> values = new ArrayList<>();
         Bundle extra = getIntent().getExtras();
         if (extra != null){
             gameId = extra.getString("gameId");
-            username = extra.getString("username");
+//            username = extra.getString("username");
             values = extra.getStringArrayList("values");
             title = extra.getString("title");
             userId = extra.getString("userId");
@@ -153,7 +153,7 @@ public class ThreadList extends AppCompatActivity {
         final Button add = (Button) findViewById(R.id.addThread);
 
         final String finalGameId1 = gameId;
-        final String finalUsername = username;
+//        final String finalUsername = username;
         final String finalGameId2 = gameId;
         final String finalGameId3 = gameId;
         final ArrayList<String> finalValues = values;
@@ -172,8 +172,8 @@ public class ThreadList extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         if (!response.isEmpty()) {
-                            AlertDialog.Builder rspns = new AlertDialog.Builder(ThreadList.this);
-                            rspns.setMessage("not empty").setNegativeButton("Retry", null).create().show();
+//                            AlertDialog.Builder rspns = new AlertDialog.Builder(ThreadList.this);
+//                            rspns.setMessage("not empty").setNegativeButton("Retry", null).create().show();
                             String url = "http://www.uvm.edu/~ertait/getGameThreads.php?gameId="+ finalGameId4;
                             RequestQueue threadQueue = Volley.newRequestQueue(ThreadList.this);
                             JsonArrayRequest threadRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
@@ -217,7 +217,7 @@ public class ThreadList extends AppCompatActivity {
 
                                             Intent intent = new Intent(ThreadList.this, ThreadList.class);
                                             intent.putExtra("gameId", finalGameId3);
-                                            intent.putExtra("username", finalUsername);
+//                                            intent.putExtra("username", finalUsername);
                                             intent.putExtra("values", finalValues);
                                             intent.putExtra("title", finalTitle);
                                             intent.putExtra("userId", finalUserId1);

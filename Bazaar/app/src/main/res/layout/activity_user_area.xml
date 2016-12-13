@@ -16,11 +16,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvWelcomeMsg"
-        android:textSize="24sp"
         tools:text="Welcome to Bazaar!"
-        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/btGames" />
 
     <TextView
         android:text="Username"
@@ -31,25 +32,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Subscribed Games"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/devGames"
-        tools:text="Subscribed Games"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:layout_marginTop="96dp"
-        android:layout_below="@+id/profilepic"
-        android:layout_toLeftOf="@+id/btGames"
-        android:layout_toStartOf="@+id/btGames" />
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/subGroups"
-        android:id="@+id/subGamesList"
-        android:layout_below="@+id/devGames" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -65,27 +47,24 @@
         android:layout_alignEnd="@+id/usrnme" />
 
     <Button
-        android:text="Developer "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/userDevelBtn"
-        android:visibility="invisible"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp"
-        android:layout_below="@+id/tvWelcomeMsg"
-        android:layout_alignLeft="@+id/devGames"
-        android:layout_alignStart="@+id/devGames"
-        android:layout_marginTop="45dp" />
-
-    <Button
-        android:text="Games List"
+        android:text="Game List"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btGames"
-        android:layout_alignBaseline="@+id/userDevelBtn"
-        android:layout_alignBottom="@+id/userDevelBtn"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/subGamesList"
+        android:layout_toEndOf="@+id/subGroups"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/devGames"
+        android:layout_alignBottom="@+id/subGroups" />
 
     <TextView
         android:text="Subscribed Groups"
@@ -93,15 +72,26 @@
         android:layout_height="wrap_content"
         android:id="@+id/subGroups"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:layout_marginTop="115dp"
-        android:layout_below="@+id/devGames"
+        android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/devGames"
-        android:layout_alignEnd="@+id/devGames" />
+        android:layout_alignEnd="@+id/devGames"
+        android:layout_marginBottom="144dp" />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/subGroups"
+        android:layout_below="@+id/subGamesList"
         android:id="@+id/subGroupList" />
+
+    <TextView
+        android:text="Subscribed Games"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/devGames"
+        tools:text="Subscribed Games"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/profilepic"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

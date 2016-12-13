@@ -1,7 +1,17 @@
 package edu.uvm.bazaar;
 
+import android.annotation.TargetApi;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,41 +45,31 @@ public class Thread extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thread);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        final ListView listView = (ListView) findViewById(R.id.list);
         TextView threadName = (TextView) findViewById(R.id.Title);
+        Button sub = (Button) findViewById(R.id.subscribe);
         ArrayList<String> comments = new ArrayList<>();
 
         Bundle extra = getIntent().getExtras();
         String userId = "";
-        String gameId = "";
+        String gameId = "none";
         String threadTitle = "";
         if (extra != null) {
-            gameId = extra.getString("gameId");
+//            if (!extra.getString("gameId").equals("")) {
+                gameId = extra.getString("gameId");
+//            }
             threadTitle = extra.getString("threadTitle");
             userId = extra.getString("userId");
             comments = extra.getStringArrayList("comments");
 
         }
         threadName.setText(threadTitle);
-//        String username1 = "stormwing95: ";
-//        String username2="EBear: ";
-//        String username3="CBear: ";
-//        String username4="IBear: ";
+        if (gameId==null){
+            gameId="none";
+        }
 
 
-//        values.add(username1+"hey, wat up?");
-//        values.add(username2+"not much, you?");
-//        values.add(username1+"i love league, but I'm exeptionally salty");
-//        values.add(username2+"the only thing weird about that is that you love league");
-//        values.add(username3+"yeah, almost everyone hates this game, actually");
-//        values.add(username1+"true,true...");
-//        values.add(username4+"yeah stormwing95, admit it. u have lol as well");
-//        values.add(username1+"fine, fine, i admit it");
-//        values.add(username2+"get rekt n00b");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, comments);
-
-        listView.setAdapter(adapter);
         Button post = (Button) findViewById(R.id.btn);
         final String finalThreadTitle = threadTitle;
         final ArrayList<String> finalComments = comments;
@@ -83,6 +83,7 @@ public class Thread extends AppCompatActivity {
         post.setOnClickListener(new View.OnClickListener() {
 
 
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View view) {
 
@@ -110,23 +111,7 @@ public class Thread extends AppCompatActivity {
                                             String c = u+": "+r;
                                             finalComments.add(c);
                                         }
-//                                AlertDialog.Builder rspns = new AlertDialog.Builder(ThreadList.this);
-//                                rspns.setMessage(comments.toString()+response.toString()).setNegativeButton("Retry", null).create().show();
 
-//                        JSONArray jsonArray = (JSONArray)jsonResponse;
-//                        if (response != null) {
-//                            int len = response.length();
-//                            for (int i=0;i<len;i++){
-//                                try {
-//                                    values.add(response.get(i).toString());
-//                                } catch (JSONException e) {
-//                                    e.printStackTrace();
-//                                }
-//                            }
-//                        }
-
-
-//                        }
                                     }
 
                                     Intent intent = new Intent(Thread.this, Thread.class);
@@ -138,6 +123,8 @@ public class Thread extends AppCompatActivity {
 
 
                                     ;
+//                                    AlertDialog.Builder rspns = new AlertDialog.Builder(Thread.this);
+//                               rspns.setMessage(finalComments.toString()+response.toString()+finalGameId).setNegativeButton("Retry", null).create().show();
                                     startActivity(intent);
 //                    AlertDialog.Builder rspns = new AlertDialog.Builder(EmptyGameProfile.this);
 //                    rspns.setMessage(response.toString()+jsonResponse.getString("txtThreadName").getClass().getName()+"values:"+values).setNegativeButton("Retry", null).create().show();
@@ -167,40 +154,83 @@ public class Thread extends AppCompatActivity {
                 EditText postText = (EditText) findViewById(R.id.editText);
                 String threadText = postText.getText().toString();
 //                AlertDialog.Builder builder = new AlertDialog.Builder(Thread.this);
-//                builder.setMessage(newTitle).create().show();
+//                builder.setMessage("gameid:"+finalGameId+" ").create().show();
                 PostComment thread = new PostComment(finalGameId, finalUserId, finalThreadTitle, threadText, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Thread.this);
                 queue.add(thread);
-//                final AddThreadRequest thread = null;
+                String subject ="New Post";
+                String body = "A thread you subscribe to has been updated!";
+                NotificationManager notif=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+                Notification notify=new Notification.Builder
+                        (getApplicationContext()).setContentText(body).
+                        setContentTitle(subject).setSmallIcon(R.drawable.star_icon).build();
 
-//
-//// Set up the input
-//                final EditText input = new EditText(Thread.this);
-//// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-////                input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-//                builder.setView(input);
-//
-//// Set up the buttons
-//                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        newTitle = input.getText().toString();
-//                        PostComment thread = new PostComment(finalGameId, finalUserId, finalThreadTitle, newTitle, responseListener);
-//                        RequestQueue queue = Volley.newRequestQueue(Thread.this);
-//                        queue.add(thread);
-//                    }
-//                });
-//                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        dialog.cancel();
-//                    }
-//                });
-//
-//                builder.show();
+
+                notify.flags |= Notification.FLAG_AUTO_CANCEL;
+                notif.notify(0, notify);
 
             }
 
         });
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, comments);
+        final TextView tName = threadName;
+        final String tTitle = threadTitle;
+        final Button sub2 = sub;
+        listView.setAdapter(adapter);
+        sub.setOnClickListener(new View.OnClickListener() {
+//            tName.setText(tTitle);
+            @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+            @Override
+            public void onClick(View view) {
+                final Response.Listener<String> listener = new Response.Listener<String>() {
+
+                    @Override
+                    public void onResponse(String response) {
+                        if (!response.isEmpty()) {
+                            AlertDialog.Builder rspns = new AlertDialog.Builder(Thread.this);
+                            rspns.setMessage("You have subscribed to the thread: "+finalThreadTitle).setNegativeButton("Ok", null).create().show();
+                        }
+                    }
+                };
+                subscribeRequest subRequest = new subscribeRequest(finalUserId,finalThreadTitle,listener);
+                RequestQueue subscribe = Volley.newRequestQueue(Thread.this);
+//                String url = "http://www.uvm.edu/~ertait/subscribethread.php?userId="+finalUserId+"&threadName="+finalThreadTitle;
+//                JsonArrayRequest gameRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+//                        new Response.Listener<JSONArray>() {
+//                            @Override
+//                            public void onResponse(JSONArray response) {
+//                                try {
+//                                    JSONObject jsonResponse = null;
+//                                    if (response.length() > 0) {
+//                                        jsonResponse = response.getJSONObject(0);
+//
+//                                    }
+//                                    if (jsonResponse != null){
+////                                        description.setText(jsonResponse.getString("fldGenre"));
+////                                        GAMEID = jsonResponse.getString("pmkGameId");
+//                                    }
+//                                } catch (JSONException e) {
+//                                    e.printStackTrace();
+//                                }
+//
+//                            };
+//                        },
+//                        new Response.ErrorListener() {
+//
+//                            @Override
+//                            public void onErrorResponse(VolleyError error) {
+//
+//                            }
+//                        });
+
+                subscribe.add(subRequest);
+
+
+            }
+        });
+
     }
+
+
 }

@@ -5,9 +5,11 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -16,6 +18,17 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.content.Intent;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,11 +42,13 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final ArrayList<String> threadPosts = new ArrayList<>();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
         String username ="";
         String devStatus ="";
         String userId ="";
+        ArrayList<String> subGames = new ArrayList<>();
         ArrayList<String> subThreads = new ArrayList<>();
         Bundle extra = getIntent().getExtras();
         if (extra != null){
@@ -41,6 +56,7 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
             userId = extra.getString("UserId");
             devStatus = extra.getString("devStatus");
             subThreads = extra.getStringArrayList("subThreads");
+            subGames = extra.getStringArrayList("subGames");
         }
 
         final TextView etUsername = (TextView) findViewById(R.id.usrnme);
@@ -51,7 +67,7 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
         final ListView subgameslist = (ListView) findViewById(R.id.subGamesList);
         final ListView subgroupslist = (ListView) findViewById(R.id.subGroupList);
         final Button gamelist = (Button) findViewById(R.id.btGames);
-        final Button devel = (Button) findViewById(R.id.userDevelBtn);
+//        final Button devel = (Button) findViewById(R.id.userDevelBtn);
         IprofilePic = (ImageView) findViewById(R.id.profilepic);
         final String finalUsername = username;
 
@@ -73,9 +89,125 @@ public class UserAreaActivity extends AppCompatActivity implements View.OnClickL
 //            });
 //            //SET BUTTON IN USER PAGE THAT LINKS TO DEVELOPMENT PAGE
 //        }
+        final ArrayList<String> finalSubThreads = subThreads;
+        final ArrayList<String> finalSubThreads1 = subThreads;
+        final String finalUserId = userId;
+        subgroupslist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(final AdapterView<?> parent, View v,
+                                    final int position, long id) {
+                final String threadTitle = (String)parent.getItemAtPosition(position);
+                //Toast.makeText(main.this, "" + position,
+                //Toast.LENGTH_SHORT).show();
+                String url = "http://www.uvm.edu/~ertait/gameforum.php?threadTitle="+threadTitle;
+                RequestQueue threadQueue = Volley.newRequestQueue(UserAreaActivity.this);
+                JsonArrayRequest threadRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+
+//
+//                ArrayList<String> list = new ArrayList<String>();
+
+                        try {
+                            JSONObject jsonResponse = null;
+                            threadPosts.clear();
+                            if (response.length() > 0) {
+                                for (int i = 0; i < response.length(); i++) {
+                                    jsonResponse = response.getJSONObject(i);
+                                    String u = (String) jsonResponse.getString("fldUsername");
+                                    String r = (String) jsonResponse.getString("txtThread");
+                                    String c = u+": "+r;
+                                    threadPosts.add(c);
+                                }
+//                                AlertDialog.Builder rspns = new AlertDialog.Builder(ThreadList.this);
+//                                rspns.setMessage(comments.toString()+response.toString()).setNegativeButton("Retry", null).create().show();
+
+//                        JSONArray jsonArray = (JSONArray)jsonResponse;
+//                        if (response != null) {
+//                            int len = response.length();
+//                            for (int i=0;i<len;i++){
+//                                try {
+//                                    values.add(response.get(i).toString());
+//                                } catch (JSONException e) {
+//                                    e.printStackTrace();
+//                                }
+//                            }
+//                        }
+
+
+//                        }
+                            }
+                            Intent intent = new Intent(UserAreaActivity.this, Thread.class);
+
+                            intent.putExtra("userId", finalUserId);
+//                            intent.putExtra("gameId", gameId);
+                            intent.putExtra("comments", threadPosts);
+                            intent.putExtra("threadTitle",threadTitle);
+
+
+                            ;
+                            startActivity(intent);
+//                    AlertDialog.Builder rspns = new AlertDialog.Builder(EmptyGameProfile.this);
+//                    rspns.setMessage(response.toString()+jsonResponse.getString("txtThreadName").getClass().getName()+"values:"+values).setNegativeButton("Retry", null).create().show();
+                            if (jsonResponse != null){
+//                        JSONArray array = (JSONArray)jsonResponse;
+//                                for (int i=0;i<response.length();i++){
+////                                    values.add(response.getString(i));
+
+//
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        AlertDialog.Builder rspns = new AlertDialog.Builder(UserAreaActivity.this);
+                        rspns.setMessage(error.toString()).setNegativeButton("Retry", null).create().show();
+                    }
+                });
+                threadQueue.add(threadRequest);
+
+
+            }
+        });
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,subThreads);
 
         subgroupslist.setAdapter(adapter);
+        final String finalUserId2 = userId;
+        subgameslist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(final AdapterView<?> parent, View v,
+                                    final int position, long id) {
+                final String gameTitle = (String)parent.getItemAtPosition(position);
+                String imageId="";
+                switch (gameTitle){
+                    case "No Man Sky":
+                        imageId = "nomansky";
+                        break;
+                    case "League of Legends":
+                        imageId = "league";
+                        break;
+                    case "Civilization Beyond Earth":
+                        imageId = "civ";
+                        break;
+                    case "World of Warcraft":
+                        imageId = "wow";
+                }
+                Intent intent = new Intent(UserAreaActivity.this,EmptyGameProfile.class);
+                intent.putExtra("imageId",imageId);
+                intent.putExtra("userId", finalUserId2);
+                intent.putExtra("TITLE",gameTitle);
+                startActivity(intent);
+
+
+            }
+        });
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,subGames);
+
+        subgameslist.setAdapter(adapter2);
         final String finalUserId1 = userId;
         gamelist.setOnClickListener(new View.OnClickListener() {
             @Override

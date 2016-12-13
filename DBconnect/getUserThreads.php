@@ -22,7 +22,7 @@ $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
  //get the user ID from the database since they are already logged in
  //for now I am just hard coding it for ease
 
- $userID = $_GET["userId"];
+ $userID = $_GET["userId"];;
 // $userID ="8";
 
  //get the numThreadNum for the database - this is the thread number, so every post from this thread will have the same txtThreadNum
@@ -37,13 +37,48 @@ $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
  $gameId = $_GET["gameId"];
 
 //GET ALL THREADS A USER IS SUBSCRIBED TO
+$query = "select txtThreadTitle from tblUserSubscriptions where fnkUserId = ?";
+//    $query = "select fldTitle from tblCallofDuty4Threads join tblVideoGame on fnkGameId=pmkGameId where fnkUserId = ?";
+$parameters = array($userID);
+//execute the query on the database object
+$results = $thisDatabaseReader->select($query, $parameters, 1, 0, 0, 0, false, false);
+// }
+ 
+// echo json_encode($threads);
 
+    //extract the results and write them to a string for packaging to JSON
+    $resultString = "";
+
+    if (!empty($results) && $results[0] != " ") {
+        foreach ($results as $val) {
+
+            $resultString = $resultString . $val[0];
+        }
+    }
+//    echo $resultString;
+    $query = "select distinct fnkGameId from tblCallofDuty4Threads where txtThreadName =?";
+    $parameters = array($resultString);
+    $results = $thisDatabaseReader->select($query, $parameters, 1, 0, 0, 0, false, false);
+    $gamestring = "";
+
+    if (!empty($results) && $results[0] != " ") {
+        foreach ($results as $val) {
+
+            $gamestring = $gamestring . $val[0];
+        }
+    }
+//    echo $gamestring;
+$query = "select fldTitle from tblVideoGame where pmkGameId =?";
+$params = array($gamestring);
+$result = $thisDatabaseReader->select($query, $params, 1, 0, 0, 0, false, false);
 //$userID = 1;
 $query = "select txtThreadTitle from tblUserSubscriptions  where fnkUserId = ?";
 $parameters = array($userID);
 //execute the query on the database object
 $threadnums = $thisDatabaseReader->select($query, $parameters, 1, 0, 0, 0, false, false);
-
+foreach ($result as $r){
+  array_push($threadnums,$r);  
+}
 echo json_encode($threadnums);
 //$queryNums is the fnkThreadNums from tblUserSubscriptions
 //I push all of these numbers into an array call $queryNums

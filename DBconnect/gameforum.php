@@ -2,7 +2,7 @@
 include "constants.php";
 include "pass.php";
 include "Database.php";
-if ($_GET) {
+//if ($_GET) {
 $dbUserName = "ispizize_reader";
 $whichPass = "r"; //flag for which one to use.
 $dbName = "ISPIZIZE_GameHub";
@@ -15,8 +15,9 @@ $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
  //get the user ID from the database since they are already logged in
  //for now I am just hard coding it for ease
 $threadName=$_GET["threadTitle"];
-//$threadName="New Civ Thread";
+//$threadName="If only";
 $userID=$_GET["userId"];
+//    $userId="8";
 $gameID=$_GET["gameId"];
 //$threadNumQuery = "select pmkPostId from tblCallofDuty4Threads where txtThreadName=?";
 //$params = array($threadName);
@@ -37,12 +38,17 @@ $gameID=$_GET["gameId"];
  //hard coding for now
 // $gameId = 1;
 // if (!empty($results)){
+
+    
+//    echo json_encode($result);
 $query = "select txtThread, fldUsername from tblCallofDuty4Threads join tblUserProfile on fnkUserId=pmkUserId where txtThreadName = ?";
 $parameters = array($threadName);
 //execute the query on the database object
 $threads = $thisDatabaseReader->select($query, $parameters, 1, 0, 0, 0, false, false);
 // }
- 
+
+
+// $threads.append($result);
  echo json_encode($threads);
 //if (is_array($threads)){
 //        foreach ($threads as $c){
@@ -61,7 +67,7 @@ $threads = $thisDatabaseReader->select($query, $parameters, 1, 0, 0, 0, false, f
 //    $results = $thisDatabaseWriter->insert($query, $data, 0,0,0,0,false,false);
 //    header('Location: https://ispizize.w3.uvm.edu/GameHub/DBconnect/gameforum.php');
     //insert into the table inbetween user and thread
-}
+//}
 ?>
 
 <!--<article id="main">

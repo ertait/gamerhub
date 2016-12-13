@@ -390,7 +390,7 @@ class Database {
     //  $semiColonAllowed is ; and generally you do not have them in your query
     //
     public function select($query, $values = "", $wheres = 1, $conditions = 0, $quotes = 0, $symbols = 0, $spacesAllowed = false, $semiColonAllowed = false) {
-        //echo $query;
+//        echo $query;
         if ($wheres != $this->countWhere($query)) {
             return "";
         }
@@ -422,7 +422,7 @@ class Database {
         $recordSet = $statement->fetchAll();
 
         $statement->closeCursor();
-       // print_r($recordSet);
+//        print_r($recordSet);
  //       print_r($values);
 //echo $recordSet.":text";
         //TRY ECHO STATEMENT HERE TO SEE IF RECORD SET IS BEING SET
